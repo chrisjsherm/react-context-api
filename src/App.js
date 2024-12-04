@@ -1,7 +1,7 @@
-import logo from "./logo.svg";
 import "./App.css";
 import UserInfoContext from "./context/UserInfoContext";
-import BlogPost from "./components/BlogPost";
+import BlogPost from "./components/BlogPage";
+import { ThemeProvider } from "./context/ThemeProvider";
 
 function App() {
   const userInfo = {
@@ -10,9 +10,11 @@ function App() {
   };
 
   return (
-    <UserInfoContext.Provider value={userInfo}>
-      <BlogPost></BlogPost>
-    </UserInfoContext.Provider>
+    <ThemeProvider>
+      <UserInfoContext.Provider value={userInfo}>
+        <BlogPost></BlogPost>
+      </UserInfoContext.Provider>
+    </ThemeProvider>
   );
 }
 

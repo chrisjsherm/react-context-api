@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Learn ReactJS the Fast Way Project Three
+
+Third project from the Udemy course, "Learn ReactJS the Fast Way".
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
