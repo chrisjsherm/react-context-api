@@ -1,6 +1,7 @@
 import "./App.css";
 import BookDetails from "./components/BookDetails";
 import Books from "./components/Books";
+import NotFound from "./components/NotFound";
 import { BooksProvider } from "./context/BooksContext";
 import {
   BrowserRouter as Router,
@@ -20,6 +21,8 @@ function App() {
             path="/books/:bookId"
             element={<BookDetails></BookDetails>}
           ></Route>
+
+          <Route path="*" element={<NotFound></NotFound>}></Route>
         </Routes>
       </Router>
     </BooksProvider>
