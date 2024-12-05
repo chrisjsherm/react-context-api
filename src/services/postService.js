@@ -7,4 +7,8 @@ const getPosts = () => {
   return api.get("/posts");
 };
 
-export { getPosts };
+const deletePost = (id) => {
+  return api.delete("/posts/" + id);
+};
+
+export { getPosts, deletePost };
