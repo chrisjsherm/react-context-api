@@ -1,19 +1,11 @@
-import React, { useContext } from "react";
-import Comment from "./Comment";
-import UserInfoContext from "../context/UserInfoContext";
+import React from "react";
 
-export default function Post() {
-  const { username, isAdmin } = useContext(UserInfoContext);
-
+export default function Post({ post }) {
   return (
     <div>
-      {isAdmin && <button>Delete</button>}
+      <h2>{post.title}</h2>
 
-      <h2>Sample Post Title</h2>
-
-      <p>This is example post content</p>
-
-      <Comment isAdmin={isAdmin} username={username}></Comment>
+      <article>{post.body}</article>
     </div>
   );
 }
